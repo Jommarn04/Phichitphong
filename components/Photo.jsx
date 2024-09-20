@@ -14,7 +14,7 @@ export default function Photo() {
                 transition: { delay: 2, duration: 0.4, ease: "easeIn" }
             }}>
                 <div className="absolute flex justify-center w-[298px] h-[248px] mt-4 xl:w-[598px] xl:h-[578px] xl:-mt-20 xl:-ms-12">
-                    <img src="/bg.png" property quality={100} fill alt="" className="object-contain"/>
+                    <img src="/bg.png" property="true" quality={100} fill alt="" className="object-contain"/>
                 </div>
             </motion.div>
 
