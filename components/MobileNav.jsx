@@ -18,6 +18,10 @@ const links = [
         name: 'Work',
         path: '/work'
     },
+    {
+        name: 'Contact',
+        path: '/contact'
+    },
 ]
 
 export default function MobileNav() {
@@ -32,7 +36,7 @@ export default function MobileNav() {
             <SheetContent className="flex flex-col">
                 {/* logo */}
                 <div className="mt-32 mb-40 text-center text-2xl">
-                    <Link href={'/'} className="">
+                    <Link href={'/'} >
                         <h1 className="text-4xl font-semibold ">
                             Film<span className="text-accent">.</span>
                         </h1>

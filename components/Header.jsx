@@ -20,7 +20,7 @@ export default function Header() {
             {/* desktop nav */}
             <div className="hidden xl:flex items-center gap-8">
                 <Navbar />
-                <Link href={'/'}>
+                <Link href={'/contact'}>
                     <Button>Hire me</Button>
                 </Link>
             </div>

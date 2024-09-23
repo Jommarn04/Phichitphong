@@ -21,47 +21,80 @@ import {
 const projects = [
     {
         num: '01',
-        category: "Calculater",
+        category: "Font-End",
         title: "Project 1",
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vitae modi neque libero necessitatibus!',
-        stack: [{ name: "C#" }, { name: "Xaml" },],
-        image: '/1.png',
-        live: "",
-        github: ""
+            'เป็นการฝึกแปลง figma design เป็น code html css javascript โดยใช้ Framework NextJs',
+        stack: [{ name: "Javascript" }, { name: "NextJs" },],
+        image: '/5.png',
+        live: "https://echo-blond.vercel.app/",
+        github: "https://github.com/Jommarn04/ECHO"
     },
     {
         num: '02',
         category: "Font-End",
-        title: "Project 1",
+        title: "Project 2",
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vitae modi neque libero necessitatibus!',
-        stack: [{ name: "C#" }, { name: "Xaml" }],
-        image: '/2.png',
-        live: "",
-        github: ""
+            'เป็นการฝึกเขียน Responsive ',
+        stack: [{ name: "Html5" }, { name: "Css3" }],
+        image: '/6.png',
+        live: "/work",
+        github: "https://github.com/Jommarn04/responsive"
     },
     {
         num: '03',
         category: "Font-End",
-        title: "Project 1",
+        title: "Project 3",
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vitae modi neque libero necessitatibus!',
-        stack: [{ name: "C#" }, { name: "Xaml" }],
-        image: '/3.png',
-        live: "",
-        github: ""
+            'เป็นการฝึกออกแบบเเละสร้างระบบ Login',
+        stack: [{ name: "Html5" }, { name: "Css3" }],
+        image: '/7.png',
+        live: "/work",
+        github: "https://github.com/Jommarn04/web-login"
     },
     {
         num: '04',
-        category: "Font-End",
-        title: "Project 1",
+        category: "calculator",
+        title: "Project 4",
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vitae modi neque libero necessitatibus!',
+            'เขียนโค้ดโปรแกรมคำนวนส่งครู ในระหว่างเรียนปี 1',
+        stack: [{ name: "C#" }, { name: "Xaml" }],
+        image: '/1.png',
+        live: "/work",
+        github: "https://github.com/Jommarn04/Calculator"
+    },
+    {
+        num: '05',
+        category: "โปรแกรมตัดเกรด",
+        title: "Project 5",
+        description:
+            'เขียนโค้ดโปรแกรมตัดเกรดส่งครู ในระหว่างเรียนปี 1',
+        stack: [{ name: "C#" }, { name: "Xaml" }],
+        image: '/3.png',
+        live: "/work",
+        github: "https://github.com/Jommarn04/ProgramGrade"
+    },
+    {
+        num: '06',
+        category: "ระบบ Login",
+        title: "Project 6",
+        description:
+            'เขียนโค้ดระบบ Login ส่งครู ในระหว่างเรียนปี 2 โดยใช้ภาษา C# เเละใช้ Access เป็นฐานข้อมูล',
+        stack: [{ name: "C#" }, { name: "Xaml" }],
+        image: '/2.png',
+        live: "/work",
+        github: "https://github.com/Jommarn04/Login"
+    },
+    {
+        num: '07',
+        category: "ระบบเพิ่ม ลบ เเละเเก้ไขข้อมูล",
+        title: "Project 7",
+        description:
+            'เขียนโค้ดระบบเพิ่ม ลบ เเละเเก้ไขข้อมูล ส่งครู ในระหว่างเรียนปี 2 โดยใช้ภาษา C# เเละใช้ Access เป็นฐานข้อมูล',
         stack: [{ name: "C#" }, { name: "Xaml" }],
         image: '/4.png',
-        live: "",
-        github: ""
+        live: "/work",
+        github: "https://github.com/Jommarn04/CRUD"
     },
 ]
 
@@ -93,7 +126,7 @@ export default function WorkPage() {
                                 {project.num}
                             </div>
                             {/* project-category */}
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize ">{project.category} Project</h2>
+                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize ">{project.category} </h2>
                             {/* project-description */}
                             <p className="text-white/60">{project.description}</p>
                             {/* stack */}
@@ -112,15 +145,15 @@ export default function WorkPage() {
                             <div className="border border-white/20"></div>
                             {/* buttons */}
                             <div className="flex items-center gap-4">
-                                {/* live-project-button */}
-                                <Link href={project.live}>
+                            {/* github-project-button */}
+                            <Link href={project.live}>
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                                                 <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                                             </TooltipTrigger>
                                             <TooltipContent>
-                                                <p>Live project</p>
+                                                <p>Live</p>
                                             </TooltipContent>
                                         </Tooltip>
                                     </TooltipProvider>
@@ -145,14 +178,14 @@ export default function WorkPage() {
                         <Swiper 
                             spaceBetween={30}
                             slidesPerView={1}
-                            className="xl:h-[620px] mb-12"
+                            className="xl:h-[620px] mb-0"
                             onSlideChange={handleSlideChange}>
                             {projects.map((project, index) => {
                                 return(
                                     <SwiperSlide key={index} className="w-full">
-                                        <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                                        <div className="h-auto relative group flex justify-center items-center bg-transparent">
                                             {/* overlay */}
-                                            <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                                            <div className="absolute top-0 bottom-0 w-full h-full bg-transparent z-10"></div>
                                             {/* image */}
                                             <div className="relative w-full h-full">
                                                 <img src={project.image} fill="true" className="object-cover" alt=""/>
