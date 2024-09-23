@@ -19,7 +19,7 @@ export default function Home() {
           <div className="text-center mt-3 xl:text-left order-2 xl:order-none">
             <span className="text-xl">Web Deverloper</span>
             <h1 className="h1 mb-6">
-              Hello I'm Film <span className=" text-accent">Phichitphong</span>
+              Hello I m Film <span className=" text-accent">Phichitphong</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I can create programs or websites. and I have 
